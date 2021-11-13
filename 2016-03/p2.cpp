@@ -1,92 +1,54 @@
 /* APCS 2016-03-q2 矩陣轉換 */
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
+#include <iostream>
+
+#define MAX_SIZE 10
+#define swap(a,b) {int tmp = a; a = b; b = tmp;}
 
 using namespace std;
 
-void row_exchange(int **arr, int r, int c) {
-    int tmp[c];
-
-    for (int i = 0, j = (r-1); i < (r/2); i++, j--) {
-        for (int k = 0; k < c; k++) {
-            tmp[k] = arr[i][k];
-            arr[i][k] = arr[j][k];
-            arr[j][k] = tmp[k];
-        }
-    }
+void flip (int R, int C, int matrix[MAX_SIZE][MAX_SIZE]) {
+    for (int r = 0; r < (R/2); r++)
+        for (int c = 0; c < C; c++)
+            swap(matrix[r][c], matrix[(R-1)-r][c]);
 }
 
-void column_exchange(int **arr, int r, int c) {
-    int tmp[r];
-
-    for (int i = 0, j = (c-1); i < (c/2); i++, j--) {
-        for (int k = 0; k < r; k++) {
-            tmp[k] = arr[k][i];
-            arr[k][i] = arr[k][j];
-            arr[k][j] = tmp[k];
-        }
-    }
-}
-
-#define max_size 10
-
-int main() {
-    int r, c, m, *arr[max_size];
-
-    for (int i = 0; i < max_size; i++)
-        arr[i] = new int[max_size];
-
-    while ( scanf("%d %d %d", &r, &c, &m) != EOF ) {
-        int s[m], cnt = 0;
-
-        for (int i = 0; i < r; i++)
-            for (int j = 0; j < c; j++)
-                scanf("%d", &arr[i][j]);
+void rotate (int &R, int &C, int matrix[MAX_SIZE][MAX_SIZE]) {
+    int duplication[R][C];
+    for (int r = 0; r < R; r++)
+        for (int c = 0; c < C; c++)
+            duplication[r][c] = matrix[r][c];
     
-        for (int i = (m-1); i >= 0; i--)
-            scanf("%d", &s[i]);
-        
-        /* flip in different direction according to how many spin we take */
-        for (int i = 0; i < m; i++) {
-            if (s[i]) {
-                if (cnt%2)  // cnt%2 != 0
-                    column_exchange(arr, r, c);
-                else
-                    row_exchange(arr, r, c);
-            }
+    swap(R,C);
+
+    for (int i = 0, c = (R-1); i < R; i++, c--)
+        for (int j = 0, r = 0; j < C; j++, r++)
+            matrix[i][j] = duplication[r][c];
+}
+
+int main () {
+    /* 加速讀寫 */
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int R, C, M, cmds[MAX_SIZE], matrix[MAX_SIZE][MAX_SIZE];
+    while ( cin >> R >> C >> M ) {
+        for (int r = 0; r < R; r++)
+            for (int c = 0; c < C; c++)
+                cin >> matrix[r][c];
+
+        for (int i = 0; i < M; i++)
+            cin >> cmds[i];
+        for (int i = M; i > 0; i--) {
+            if (cmds[i-1])
+                flip(R, C, matrix);
             else
-                cnt++;
+                rotate(R, C, matrix);
         }
 
-        if (cnt%2)
-            printf("%d %d\n", c, r);
-        else
-            printf("%d %d\n", r, c);
-
-        /* print in different order according to how many spin we take */
-        switch (cnt%4) {
-            case 0 :
-                for(int i = 0; i < r; i++)
-                    for(int j = 0; j < c; j++)
-                        printf("%d%c",arr[i][j], j == (c-1) ? '\n' : ' ');
-                break;
-            case 1 :
-                for(int i = (c-1); i >= 0; i--)
-                    for(int j = 0; j < r; j++)
-                        printf("%d%c",arr[j][i], j == (r-1) ? '\n' : ' ');
-                break;
-            case 2 :
-                for(int i = (r-1); i >= 0; i--)
-                    for(int j = (c-1); j >= 0; j--)
-                        printf("%d%c",arr[i][j], j == 0 ? '\n' : ' ');
-                break;
-            default :
-                for(int i = 0; i < c; i++)
-                    for(int j = (r-1); j >= 0; j--)
-                        printf("%d%c",arr[j][i], j == 0 ? '\n' : ' ');
-                break;
-        }
+        cout << R << " " << C << endl;
+        for (int r = 0; r < R; r++)
+            for (int c = 0; c < C; c++)
+                cout << matrix[r][c] << ((c != (C-1)) ? ' ' : '\n');
     }
     return 0;
 }
