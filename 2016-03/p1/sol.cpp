@@ -1,4 +1,4 @@
-/* APCS 2016-03-q1 成績指標 */
+/* APCS 2016-03-p1 成績指標 */
 #include <stdio.h>
 #include <algorithm>
 

@@ -1,4 +1,4 @@
-/* APCS 2016-03-q2 矩陣轉換 */
+/* APCS 2016-03-p2 矩陣轉換 */
 #include <bits/stdc++.h>
 
 #define MAX_SIZE 10
