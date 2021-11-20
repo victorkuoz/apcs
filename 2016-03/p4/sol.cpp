@@ -1,6 +1,5 @@
-/* APCS 2016-03-q4 血緣關係 */
-#include <iostream>
-#include <vector>
+/* APCS 2016-03-p4 血緣關係 */
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -36,6 +35,7 @@ int DFS (int cur) {
 }
 
 int main () {
+    /* 加速讀寫 */
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
