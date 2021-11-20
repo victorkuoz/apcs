@@ -1,5 +1,5 @@
 /* APCS 2016-03-q2 矩陣轉換 */
-#include <iostream>
+#include <bits/stdc++.h>
 
 #define MAX_SIZE 10
 #define swap(a,b) {int tmp = a; a = b; b = tmp;}
