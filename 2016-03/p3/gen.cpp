@@ -23,7 +23,7 @@ int main () {
 
     fstream file;
     for (int i = 0; i < 11; i++) {
-        string name = "testcase/" + static_cast<string>((i<10) ? "0" : "") + to_string(i) + ".in";
+        string name = "testcase/" + to_string(i) + ".in";
         file.open(name, ios::out);
         if (i < NUM_OF_BASE_TESTCASE)
             testcaseGenerator(file, 0);
