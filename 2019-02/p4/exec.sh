@@ -2,8 +2,9 @@
 
 if [ $# -ne 0 ]; then
 	cd testcase/
-	zip -r ../packet.zip *
+	zip -r ../testcase.zip *
 	cd ../
+	rm -r -f testcase/
 	exit
 fi
 
