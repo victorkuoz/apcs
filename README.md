@@ -1,21 +1,21 @@
 # *Past Exams*
-- $2016.03$
+- *2016.03*
     - https://hackmd.io/iaPKiVcrSdm5-fCGoNBzMA
-- $2016.10$
+- *2016.10*
     - https://hackmd.io/FA0G8uTeRPua7ewm6geaRw
-- $2017.03$
+- *2017.03*
     - https://hackmd.io/iDXRRZJGTHKg-UL_Mg9aSw
-- $2017.10$
+- *2017.10*
     - https://hackmd.io/2p5vbgl1Tme14Ezqh58pmw
-- $2018.02$
+- *2018.02*
     - https://hackmd.io/cwlTZYnjSDmGTOO7usbOtA
-- $2018.06$
+- *2018.06*
     - https://hackmd.io/8RIhjqBFQKChDdLpa5r9og
-- $2018.10$
+- *2018.10*
     - https://hackmd.io/PYtNNLucTKmgL4JWWHvG3w
-- $2019.02$
+- *2019.02*
     - https://hackmd.io/xRA7H9GuQdSWRQN7zhwd3Q
-- $2019.06$
+- *2019.06*
     - https://hackmd.io/7vghUjqRRPiqf0GlST_mLQ
 ## 2019 10
 - https://hackmd.io/k6b7ak3uQZ68J_QzGWViCQ
