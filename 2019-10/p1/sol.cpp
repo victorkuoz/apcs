@@ -1,6 +1,5 @@
-/* APCS 2019-10-q1 音階校正 */
-#include <iostream>
-#include <deque>
+/* APCS 2019-10-p1 音階校正 */
+#include <bits/stdc++.h>
 
 using namespace std;
 

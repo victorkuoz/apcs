@@ -17,8 +17,8 @@
     - https://hackmd.io/xRA7H9GuQdSWRQN7zhwd3Q
 - *2019.06*
     - https://hackmd.io/7vghUjqRRPiqf0GlST_mLQ
-## 2019 10
-- https://hackmd.io/k6b7ak3uQZ68J_QzGWViCQ
+- *2019.10*
+	- https://hackmd.io/k6b7ak3uQZ68J_QzGWViCQ
 ## 2020 01
 - https://hackmd.io/AgWBAQl7QWKc3QPJCzp78g
 ## 2020 07

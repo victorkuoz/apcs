@@ -1,13 +1,13 @@
-/* APCS 2019-10-q4 刪除邊界 */
-#include <iostream>
+/* APCS 2019-10-p4 刪除邊界 */
+#include <bits/stdc++.h>
 
 using namespace std;
 
-#define NotYet 625
+#define NotYet 10001
 #define acceralateIO(x) ios::sync_with_stdio(x); cin.tie(x); cout.tie(x);
 
-bool isOne[25][25];
-uint16_t dpTable[25][25][25][25];
+bool isOne[100][100];
+uint16_t dpTable[100][100][100][100];
 
 /* 計算移除 (r,c) 至 (R,C) 需要修改之次數 */
 uint16_t numOfModification (int r, int c, int R, int C) {

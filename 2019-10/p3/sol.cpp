@@ -1,7 +1,5 @@
-/* APCS 2019-10-q3 闖關路線 */
-#include <iostream>
-#include <vector>
-#include <queue>
+/* APCS 2019-10-p3 闖關路線 */
+#include <bits/stdc++.h>
 
 using namespace std;
 

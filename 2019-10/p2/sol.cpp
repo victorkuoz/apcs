@@ -1,6 +1,5 @@
-/* APCS 2019-10-q2 洗牌 */
-#include <iostream>
-#include <vector>
+/* APCS 2019-10-p2 德州撲克 */
+#include <bits/stdc++.h>
 
 using namespace std;
 
